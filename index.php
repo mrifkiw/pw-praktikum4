@@ -1,6 +1,5 @@
 <?php
     require_once('DaftarKaryawan.php');
-    
 ?>
 
 <!DOCTYPE html>
@@ -27,6 +26,7 @@
             <div class="dropdown">
                 <label for="status">Status Karyawan</label>
                 <select name="status" id="status">
+                    <option value="Choose Status" selected>Choose Status</option>
                     <option value="All" >All</option>
                     <option value="Fulltime" >Fulltime</option>
                     <option value="Parttime" >Parttime</option>
