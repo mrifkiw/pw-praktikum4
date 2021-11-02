@@ -5,9 +5,9 @@ class Gender {
     const FEMALE = 'Perempuan';
 }
 class LevelKaryawan {
-    const JUNIOR = 2000000;
-    const AMATEUR = 3500000;
-    const SENIOR = 5000000;
+    const JUNIOR = 'Junior';
+    const AMATEUR = 'Amateur';
+    const SENIOR = 'Senior';
 }
 
 abstract class Karyawan {
@@ -25,15 +25,18 @@ abstract class Karyawan {
         $this->setGajiKaryawanLevel($this->level);
     }
 
-    public function setGajiKaryawanLevel(string $level)
+    function setGajiKaryawanLevel(string $level)
     {
         switch ($level) {
             case LevelKaryawan::AMATEUR:
-                $this->gaji = LevelKaryawan::AMATEUR;
+                $this->gaji = 2000000;
+                break;
             case LevelKaryawan::JUNIOR:
-                $this->gaji = LevelKaryawan::JUNIOR;
+                $this->gaji = 3500000;
+                break;
             case LevelKaryawan::SENIOR:
-                $this->gaji = LevelKaryawan::SENIOR;
+                $this->gaji = 5000000;
+                break;
         }
     }
 

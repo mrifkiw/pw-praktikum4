@@ -2,8 +2,8 @@
     require_once('Karyawan.php');
 
     class StatusKaryawan extends Karyawan {
-        const FULLTIME = 'fulltime';
-        const PARTTIME = 'parttime';
+        const FULLTIME = 'Fulltime';
+        const PARTTIME = 'Parttime';
         private array $dataToArray;
 
         public function __construct(

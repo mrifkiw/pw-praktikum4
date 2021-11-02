@@ -1,39 +1,8 @@
 <?php
-    require_once('StatusKaryawan.php');
-
-    $Wijoyo = new StatusKaryawan(
-        1,
-        'Wijoyo',
-        'Tangerang 25 Oktober 1998',
-        Gender::MALE,
-        LevelKaryawan::SENIOR,
-        StatusKaryawan::FULLTIME
-    );
-    $Wisnu = new StatusKaryawan(
-        3,
-        'Wisnu',
-        'Depok 24 November 1999',
-        Gender::MALE,
-        LevelKaryawan::JUNIOR,
-        StatusKaryawan::PARTTIME
-    );
-    $Mukti = new StatusKaryawan(
-        3,
-        'Mukti',
-        'Bekasi 23 Desember 2000',
-        Gender::MALE,
-        LevelKaryawan::AMATEUR,
-        StatusKaryawan::FULLTIME
-    );
-
-
-    $table_header = ["No", "Nama Karyawan", "Tempat, Tanggal Lahir", "Gender", "Level", "Status","Gaji"];
-    $daftar_karyawan = array (
-        $Wijoyo->getDataInArray(),
-        $Wisnu->getDataInArray(),
-        $Mukti->getDataInArray()
-    );
+    require_once('DaftarKaryawan.php');
+    
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -48,8 +17,25 @@
     <title>Daftar Karyawan</title>
 </head>
 <body>
-<div class="board-store">
+    <div class="board-store">
         <h1>Daftar Karyawan Toko Joyable 🌿</h1>
+        <form 
+            class="form-filter"
+            action="DropdownHandling.php"
+            method="post"
+        >
+            <div class="dropdown">
+                <label for="status">Status Karyawan</label>
+                <select name="status" id="status">
+                    <option value="All" >All</option>
+                    <option value="Fulltime" >Fulltime</option>
+                    <option value="Parttime" >Parttime</option>
+                </select>
+            </div>
+            <div class="btn-submit">
+                <button type="submit">Filter</button>
+            </div>
+        </form>
         <table class="styled-table">
             <thead>
                 <tr>

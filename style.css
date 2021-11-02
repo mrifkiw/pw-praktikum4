@@ -44,3 +44,17 @@ body {
     border-bottom: 2px solid #A653F5;
 }
 
+.btn-submit button{
+    margin-left: 10px;
+    padding: 10px 16px;
+}
+.form-filter {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+}
+
+.dropdown select{
+    padding: 10px 20px;
+}
+
